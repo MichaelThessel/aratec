@@ -5,7 +5,15 @@
   </head>
   <body>
     {{ partial "header.html" . }}
-    {{ block "main" . }}{{ end }}
+    <div class="cavani_tm_mainpart">
+      <div class="author_image">
+        {{ $image := resources.Get "/img/about/1.jpg" }}
+        <div class="main" data-img-url="{{ $image.RelPermalink }}"></div>
+      </div>
+      <div class="main_content">
+        {{ block "main" . }}{{ end }}
+      </div>
+    </div>
     {{ partial "footer.html" . }}
   </body>
 </html>
