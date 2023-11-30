@@ -1,45 +1,68 @@
-{{- /*
-Renders a menu for the given menu ID.
-
-@context {page} page The current page.
-@context {string} menuID The menu ID.
-
-@example: {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-*/}}
-
-{{- $page := .page }}
-{{- $menuID := .menuID }}
-
-{{- with index site.Menus $menuID }}
-  <nav>
-    <ul>
-      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-    </ul>
-  </nav>
-{{- end }}
-
-{{- define "partials/inline/menu/walk.html" }}
-  {{- $page := .page }}
-  {{- range .menuEntries }}
-    {{- $attrs := dict "href" .URL }}
-    {{- if $page.IsMenuCurrent .Menu . }}
-      {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
-    {{- else if $page.HasMenuCurrent .Menu .}}
-      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
-    {{- end }}
-    <li>
-      <a
-        {{- range $k, $v := $attrs }}
-          {{- with $v }}
-            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
-          {{- end }}
-        {{- end -}}
-      >{{ or (T .Identifier) .Name | safeHTML }}</a>
-      {{- with .Children }}
-        <ul>
-          {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+<!-- MOBILE MENU -->
+<div class="cavani_tm_topbar">
+  <div class="topbar_inner">
+    <div class="logo" data-type="image"> <!-- You can use text or image as logo. data-type values are: "image" and "text" -->
+      <a class="image" href="/"><img src="img/logo/dark.png" alt="" /></a>
+      <a class="text" href="/"><span>Cavani</span></a>
+    </div>
+    <div class="trigger">
+      <div class="hamburger hamburger--slider">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cavani_tm_mobile_menu">
+  <div class="inner">
+    <div class="wrapper">
+      <div class="avatar">
+        <div class="image" data-img-url="img/about/1.jpg"></div>
+      </div>
+      <div class="menu_list">
+        <ul class="transition_link">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/service">Service</a></li>
+          <li><a href="/news">News</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
-      {{- end }}
-    </li>
-  {{- end }}
-{{- end }}
+      </div>
+      <div class="social">
+        <ul>
+          <li><a href="/"><img class="svg" src="{{ "/img/svg/social/facebook.svg" | urlize | relURL }}" alt="" /></a></li>
+          <li><a href="/"><img class="svg" src="{{ "/img/svg/social/twitter.svg" | urlize | relURL }}" alt="" /></a></li>
+          <li><a href="/"><img class="svg" src="{{ "/img/svg/social/instagram.svg" | urlize | relURL }}" alt="" /></a></li>
+          <li><a href="/"><img class="svg" src="{{ "/img/svg/social/tik-tok.svg" | urlize | relURL }}" alt="" /></a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>Copyright &copy; 2022</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- /MOBILE MENU -->
+
+<!-- HEADER -->
+<div class="cavani_tm_header">
+  <div class="logo" data-type="image"> <!-- You can use text or image as logo. data-type values are: "image" and "text" -->
+    <a class="image" href="/"><img src="img/logo/dark.png" alt="" /></a>
+    <a class="text" href="/"><span>Cavani</span></a>
+  </div>
+  <div class="menu">
+    <ul class="transition_link">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/portfolio">Portfolio</a></li>
+      <li><a href="/service">Service</a></li>
+      <li><a href="/news">News</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <span class="ccc"></span>
+  </div>
+</div>
+<!-- /HEADER -->

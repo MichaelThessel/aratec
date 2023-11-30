@@ -1,1 +1,20 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+  <!-- FOOTER -->
+  <div class="cavani_tm_footer">
+    <div class="copyright">
+      <p>Copyright &copy; 2023</p>
+    </div>
+    <div class="social">
+      <ul>
+        <li><a href="#"><img class="svg" src="{{ "/img/svg/social/facebook.svg" | urlize | relURL }}" alt="" /></a></li>
+        <li><a href="#"><img class="svg" src="{{ "/img/svg/social/twitter.svg" | urlize | relURL }}" alt="" /></a></li>
+        <li><a href="#"><img class="svg" src="{{ "/img/svg/social/instagram.svg" | urlize | relURL }}" alt="" /></a></li>
+        <li><a href="#"><img class="svg" src="{{ "/img/svg/social/tik-tok.svg" | urlize | relURL }}" alt="" /></a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- /FOOTER -->
+
+</div>
+<!-- / WRAPPER ALL -->
+
+{{ partialCached "footer/js.html" . }}
