@@ -6,3 +6,17 @@ h1, h2, h3, h4, h5, h6 {
  position: unset;
  width: unset;
 }
+
+/* Imported map styles from template */
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 355px;
+  width: 100%;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 355px;
+  width: 100%;
+}
