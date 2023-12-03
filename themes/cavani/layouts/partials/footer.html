@@ -1,7 +1,13 @@
   <!-- FOOTER -->
   <div class="cavani_tm_footer">
-    <div class="copyright">
-      <p>Copyright &copy; {{ time.Now | time.Format "2006" }}</p>
+    <div class="contact">
+      <p>T: <a href="tel:+18673329173">+1 867 332 9173</a> | E: <a href="mailto:info@aratec.ca">info@aratec.ca</a></p>
+    </div>
+    <div class="social">
+      <ul>
+        {{ $image := resources.Get "img/svg/social/linkedin.svg" }}
+        <li><a href="https://www.linkedin.com/in/michaelthessel/"><img class="svg" src="{{ $image.RelPermalink }}" alt="" /></a></li>
+      </ul>
     </div>
   </div>
   <!-- /FOOTER -->

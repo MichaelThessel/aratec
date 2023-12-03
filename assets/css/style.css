@@ -1,7 +1,16 @@
+/* Heading */
 h1, h2, h3, h4, h5, h6 {
   color: #d82bda;
 }
+/* Footer */
+.cavani_tm_footer .contact p,
+.cavani_tm_footer .contact p a {
+  color: #333;
+  font-family: "Poppins";
+  text-decoration: none;
+}
 
+/* Remove left image from theme */
 .cavani_tm_mainpart  .main_content {
  position: unset;
  width: unset;
@@ -21,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+/* Portfolio */
 .cavani_tm_portfolio .cavani_tm_title {
   margin-bottom: 55px;
 }
