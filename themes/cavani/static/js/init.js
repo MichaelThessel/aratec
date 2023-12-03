@@ -17,12 +17,10 @@ jQuery(document).ready(function(){
 	cavani_tm_trigger_menu();
 	cavani_tm_my_progress();
 	cavani_tm_circular_progress();
-	cavani_tm_portfolio_popup();
 	cavani_tm_news_popup();
 	cavani_tm_service_popup();
 	cavani_tm_imgtosvg();
 	cavani_tm_popup();
-	cavani_tm_portfolio();
 	cavani_tm_data_images();
 	cavani_tm_contact_form();
 	cavani_tm_mycarousel();
@@ -179,37 +177,6 @@ function cavani_tm_circular_progress(){
 	});
 }
 
-// -------------------------------------------------
-// -----------  PORTFOLIO POPUP  -------------------
-// -------------------------------------------------
-
-function cavani_tm_portfolio_popup(){
-	
-	"use strict";
-	
-	var modalBox		= jQuery('.cavani_tm_modalbox');
-	var button			= jQuery('.cavani_tm_portfolio .portfolio_popup');
-	var closePopup		= modalBox.find('.close');
-	
-	button.off().on('click',function(){
-		var element = jQuery(this);
-		var parent 	= element.closest('.list_inner');
-		var content = parent.find('.hidden_content').html();
-		var image	= parent.find('.image .main').data('img-url');
-		var details = parent.find('.details').html();
-		modalBox.addClass('opened');
-		modalBox.find('.description_wrap').html(content);
-		modalBox.find('.popup_details').prepend('<div class="top_image"><img src="img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+image+'"></div></div>');
-		modalBox.find('.popup_details .top_image').after('<div class="portfolio_main_title">'+details+'<div>');
-		cavani_tm_data_images();
-		return false;
-	});
-	closePopup.on('click',function(){
-		modalBox.removeClass('opened');
-		modalBox.find('.description_wrap').html('');
-		return false;
-	});
-}
 
 // -------------------------------------------------
 // ----------------  NEWS POPUP  -------------------
@@ -347,42 +314,6 @@ function cavani_tm_popup(){
 		   enabled: true, 
 	   },
 	});
-}
-
-// -------------------------------------------------
-// -----------------    PORTFOLIO    ---------------
-// -------------------------------------------------
-
-function cavani_tm_portfolio(){
-
-	"use strict";
-	
-	if(jQuery().isotope) {
-
-		// Needed variables
-		var filter		 = jQuery('.cavani_tm_portfolio .portfolio_filter ul');
-
-		if(filter.length){
-			// Isotope Filter 
-			filter.find('a').on('click', function(){
-				var element		= jQuery(this);
-				var selector 	= element.attr('data-filter');
-				var list		= element.closest('.cavani_tm_portfolio').find('.portfolio_list').children('ul');
-				list.isotope({ 
-					filter				: selector,
-					animationOptions	: {
-						duration			: 750,
-						easing				: 'linear',
-						queue				: false
-					}
-				});
-				
-				filter.find('a').removeClass('current');
-				element.addClass('current');
-				return false;
-			});	
-		}
-	}
 }
 
 // -----------------------------------------------------

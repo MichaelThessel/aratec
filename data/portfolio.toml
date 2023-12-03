@@ -1,0 +1,17 @@
+portfolio = [
+  { description = "Founder & Developer of real time application level intrusion detection system.", image = "iogly-700x658.png", name = "Iogly" },
+  { description = "Lead developer of open source project.", image = "pwx-700x570.png", name = "PWX" },
+  { description = "Site re-development, performance optimisations and site extension.", image = "andrewchristian.com_-700x536.jpg", name = "Andrew Christian" },
+  { description = "Complete revamp, performance optimisations & feature additions.", image = "paperdivas.com_.au_-700x505.png", name = "Paperdivas" },
+  { description = "Complete revamp, performance optimisations & feature additions.", image = "lovestruckinvitations.com_.au_-700x512.png", name = "Lovestruck Invitations" },
+  { description = "Implementation of NLM3 XML document conversion service.", image = "pkp-udev.lib_.sfu_.ca_-700x555.png", name = "Public Knowlegde Project" },
+  { description = "Member core development team.", image = "pkp.sfu_.ca_-700x565.png", name = "Public Knowlegde Project" },
+  { description = "Development of Groupon clone to facilitate charitable donations.", image = "karmaexchange.com_-700x530.jpg", name = "Karma Exchange" },
+  { description = "Development of web fronted for CRM system.", image = "canadawide.com_-700x555.png", name = "Canada Wide" },
+  { description = "Functionality extensions & performance optimizations.", image = "prometheanworld.com_-700x467.png", name = "Promethean World" },
+  { description = "Implementation of additional features & site maintenance.", image = "coursework.info_-700x292.png", name = "Cursework.info" },
+  { description = "Extensive feature additions & maintenance.", image = "malaysia.com_-700x467.png", name = "malaysia.com" },
+  { description = "Complete site revamp, performance optimizations & feature additions.", image = "thestudentroom.co_.uk_-700x526.png", name = "The Student Room" },
+  { description = "Implementation of web application to aid the migration to SAP.", image = "acg-world.com_-700x517.png", name = "ACG World" },
+  { description = "Implementation of framework to implement business logic for intranet and website.", image = "mpipks-dresden.mpg.de_-700x528.png", name = "Max Planck Institute" },
+]
