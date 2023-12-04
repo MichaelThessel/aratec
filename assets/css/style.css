@@ -2,6 +2,14 @@
 h1, h2, h3, h4, h5, h6 {
   color: #d82bda;
 }
+
+/* Logo */
+@media (min-width: 1024px) {
+  .cavani_tm_header .logo img {
+    max-width: 160px;
+  }
+}
+
 /* Footer */
 .cavani_tm_footer .contact p,
 .cavani_tm_footer .contact p a {
