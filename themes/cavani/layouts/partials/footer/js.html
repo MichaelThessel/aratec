@@ -1,13 +1,12 @@
 
-<script defer language="javascript" type="text/javascript"  src="{{ "/js/jquery.js" | urlize | relURL }}"></script>
+{{- with resources.Get "js/jquery.js" }}
+  <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}"></script>
+{{- end }}
 
-<!--[if lt IE 10]>
-<script defer language="javascript" type="text/javascript"  src="{{ "/js/ie8.js" | urlize | relURL }}"></script>
-<![endif]-->
+{{- with resources.Get "js/plugins.js" }}
+  <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}"></script>
+{{- end }}
 
-<script defer language="javascript" type="text/javascript"  src="{{ "/js/plugins.js" | urlize | relURL }}"></script>
-<script defer language="javascript" type="text/javascript"  src="{{ "/js/init.js" | urlize | relURL }}"></script>
-
-<!--
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&callback=initMap"></script>
--->
+{{- with resources.Get "js/init.js" }}
+  <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}"></script>
+{{- end }}
