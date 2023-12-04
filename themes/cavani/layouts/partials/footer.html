@@ -6,7 +6,9 @@
     <div class="social">
       <ul>
         {{ $image := resources.Get "img/svg/social/linkedin.svg" }}
-        <li><a href="https://www.linkedin.com/in/michaelthessel/"><img class="svg" src="{{ $image.RelPermalink }}" alt="" /></a></li>
+        <li><a href="https://www.linkedin.com/in/michaelthessel/"><img class="svg" src="{{ $image.RelPermalink }}" alt="LinkedIn" /></a></li>
+        {{ $image := resources.Get "img/svg/social/github.svg" }}
+        <li><a href="https://github.com/MichaelThessel"><img class="svg" src="{{ $image.RelPermalink }}" alt="GitHub" /></a></li>
       </ul>
     </div>
   </div>
