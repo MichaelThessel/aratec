@@ -10,6 +10,23 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
+/* Home */
+.cavani_tm_home {
+  display: flex;
+
+}
+.cavani_tm_home .banner {
+  width: 600px;
+  height: 100%;
+  background-color: #000;
+}
+
+@media (max-width: 1024px) {
+  .cavani_tm_home .banner {
+    display: none;
+  }
+}
+
 /* Remove left image from theme */
 .cavani_tm_mainpart  .main_content {
  position: unset;

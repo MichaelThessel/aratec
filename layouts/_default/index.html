@@ -1,6 +1,10 @@
 {{ define "main" }}
   <div class="cavani_tm_section animated" id="home">
     <div class="cavani_tm_home">
+      {{ $image := resources.Get "img/home/banner.png" }}
+      <div class="banner">
+        <img src="{{ $image.RelPermalink }}" />
+      </div>
       <div class="content">
         <h3 class="name">Aratec</h3>
         <span class="line"></span>
