@@ -1,0 +1,8 @@
+service = [
+  { description = "Development of custom web sites.", image = "3d.svg", title = "Web Development" },
+  { description = "Optimisation and extension of existing software projects.", image = "3d.svg", title = "Software & Database Optimisation and Extension" },
+  { description = "Development of custom landing pages.", image = "3d.svg", title = "Landing Pages" },
+  { description = "Search Engine Optimisation for existing web properties.", image = "3d.svg", title = "SEO" },
+  { description = "Processing, modeling and tranfsformation of any kind of data.", image = "3d.svg", title = "Data Modeling" },
+  { description = "Data analysis and report development for any kind of data.", image = "3d.svg", title = "Data Science" },
+]
